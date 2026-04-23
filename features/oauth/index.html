@@ -1532,16 +1532,19 @@ const profile = await fetch('https://oasisbio.com/api/oauth/userinfo', {
 const characters = await fetch('https://oasisbio.com/api/oauth/resources/oasisbios', {
   headers: { Authorization: `Bearer ${access_token}` },
 }).then(r =&gt; r.json());
+// → { data: [{ id, title, slug, tagline, coverImageUrl, visibility, status, publishedAt, createdAt, updatedAt }], count: number }
 
 // Full character data (requires 'oasisbios:full' scope)
 const characterDetail = await fetch('https://oasisbio.com/api/oauth/resources/oasisbios/{id}', {
   headers: { Authorization: `Bearer ${access_token}` },
 }).then(r =&gt; r.json());
+// → { id, title, slug, tagline, coverImageUrl, visibility, status, publishedAt, createdAt, updatedAt, abilities: [...], eras: [...], worlds: [...], references: [...], models: [...] }
 
 // DCOS documents (requires 'dcos:read' scope)
 const dcosDocuments = await fetch('https://oasisbio.com/api/oauth/resources/oasisbios/{id}/dcos', {
   headers: { Authorization: `Bearer ${access_token}` },
 }).then(r =&gt; r.json());
+// → { data: [{ id, title, slug, content, folderPath, status, version, createdAt, updatedAt }], count: number }
 </code></pre>
 <h3 id="6-refresh-tokens">6. Refresh tokens</h3>
 <p>Access tokens expire after 1 hour. Use the refresh token to get a new access token:</p>
@@ -1647,6 +1650,11 @@ Authorization: Bearer &lt;access_token&gt;
 GET /api/oauth/resources/oasisbios/:id                # full detail (oasisbios:full)
 GET /api/oauth/resources/oasisbios/:id/dcos           # DCOS docs (dcos:read)
 </code></pre>
+<p><strong>Return formats:</strong>
+- <code>/api/oauth/resources/oasisbios</code>: <code>{ data: [...], count: number }</code>
+- <code>/api/oauth/resources/oasisbios/:id</code>: Full character object with nested abilities, eras, worlds, references, and models
+- <code>/api/oauth/resources/oasisbios/:id/dcos</code>: <code>{ data: [...], count: number }</code></p>
+<p><strong>Permission verification:</strong> All resource endpoints verify that the authenticated user is the owner of the requested character. Attempting to access another user's character will return a 403 Forbidden error.</p>
 <h3 id="token-revocation">Token Revocation</h3>
 <pre><code>POST /api/oauth/revoke
 Body: token=&lt;token&gt;&amp;token_type_hint=access_token
@@ -1655,7 +1663,8 @@ Body: token=&lt;token&gt;&amp;token_type_hint=access_token
 <h3 id="oidc-discovery">OIDC Discovery</h3>
 <pre><code>GET /api/oauth/.well-known/openid-configuration
 </code></pre>
-<p>Machine-readable configuration for OIDC clients.</p>
+<p>Machine-readable configuration for OIDC clients. Includes endpoints, supported scopes, and other OIDC metadata.</p>
+<p><strong>Note:</strong> The discovery document references a JWKS endpoint at <code>/api/oauth/.well-known/jwks.json</code>, but this endpoint is not currently implemented. For now, OIDC clients should use the issuer URL for token validation.</p>
 <hr />
 <h2 id="token-lifetimes">Token Lifetimes</h2>
 <table>
