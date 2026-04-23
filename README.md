@@ -2,18 +2,32 @@
 
 ## Documents
 
+### Technical Documentation
 | Document | Description |
 |----------|-------------|
-| [technical.md](technical.md) | Full technical reference — architecture, auth, database schema, API, world builder, OAuth provider, testing, deployment |
-| [edge-functions.md](edge-functions.md) | Edge Functions spec, current Next.js API routes, and migration guide to Supabase Edge Functions |
-| [design.md](design.md) | Design system — color palette, typography, components, layout |
-| [world-design-spec.md](world-design-spec.md) | Worldbuilding standard — 6-module structure, field definitions |
-| [features/oauth.md](features/oauth.md) | OAuth Provider — "Continue with Oasis" integration guide for third-party developers |
-| [features/oasisbio.md](features/oasisbio.md) | OasisBio identity container — modes, eras, structure |
-| [features/worlds.md](features/worlds.md) | Worldbuilding system — creation, components, world-identity binding |
-| [features/abilities.md](features/abilities.md) | Ability Pool system — categories, levels, era/world binding |
-| [features/repositories.md](features/repositories.md) | Repositories — DCOS, References |
-| [features/models.md](features/models.md) | 3D Model system |
+| [technical.md](technical/technical.md) | Full technical reference — architecture, auth, database schema, API, world builder, OAuth provider, testing, deployment |
+| [edge-functions.md](technical/edge-functions.md) | Edge Functions spec, current Next.js API routes, and migration guide to Supabase Edge Functions |
+
+### Design Documentation
+| Document | Description |
+|----------|-------------|
+| [design.md](design/design.md) | Design system — color palette, typography, components, layout |
+| [world-design-spec.md](design/world-design-spec.md) | Worldbuilding standard — 6-module structure, field definitions |
+
+### Feature Documentation
+| Document | Description |
+|----------|-------------|
+| [oauth.md](features/oauth.md) | OAuth Provider — "Continue with Oasis" integration guide for third-party developers |
+| [oasisbio.md](features/oasisbio.md) | OasisBio identity container — modes, eras, structure |
+| [worlds.md](features/worlds.md) | Worldbuilding system — creation, components, world-identity binding |
+| [abilities.md](features/abilities.md) | Ability Pool system — categories, levels, era/world binding |
+| [repositories.md](features/repositories.md) | Repositories — DCOS, References |
+| [models.md](features/models.md) | 3D Model system |
+
+### Strategic Documentation
+| Document | Description |
+|----------|-------------|
+| [OasisBio Strategic Plan.md](strategy/OasisBio Strategic Plan.md) | Strategic plan for OasisBio project |
 
 ## Database Setup Scripts
 
