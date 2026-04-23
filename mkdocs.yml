@@ -1,0 +1,33 @@
+site_name: OasisBio Documentation
+
+nav:
+  - Home: index.md
+  - Technical Documentation:
+    - Technical Reference: technical/technical.md
+    - Edge Functions: technical/edge-functions.md
+  - Design Documentation:
+    - Design System: design/design.md
+    - World Design Spec: design/world-design-spec.md
+  - Feature Documentation:
+    - OAuth: features/oauth.md
+    - OasisBio: features/oasisbio.md
+    - Worlds: features/worlds.md
+    - Abilities: features/abilities.md
+    - Repositories: features/repositories.md
+    - Models: features/models.md
+  - Strategic Documentation:
+    - OasisBio Strategic Plan: strategy/OasisBio Strategic Plan.md
+
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+  palette:
+    primary: indigo
+    accent: blue

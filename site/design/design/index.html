@@ -1,0 +1,2266 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../technical/edge-functions/">
+      
+      
+        <link rel="next" href="../world-design-spec/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Design System - OasisBio Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#oasisbio-design-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OasisBio Documentation" class="md-header__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OasisBio Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Design System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technical/technical/" class="md-tabs__link">
+          
+  
+  Technical Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Design Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../features/oauth/" class="md-tabs__link">
+          
+  
+  Feature Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-tabs__link">
+          
+  
+  Strategic Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OasisBio Documentation" class="md-nav__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OasisBio Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Technical Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/edge-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edge Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Philosophy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Design Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Design Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-swiss-grid-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Swiss Grid System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-blackwhite-minimalism" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Black/White Minimalism
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-editorial-typography" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Editorial Typography
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-motion-restraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Motion Restraint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-palette" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Palette
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Color Palette">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-colors-grayscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secondary Colors (Grayscale)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Colors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typography
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#font-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font Families
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font Sizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-heights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Line Heights
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layout Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spacing-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spacing System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Card
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling-and-user-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling and User Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navbar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Layouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Page Layouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homepage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homepage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oasisbio-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      OasisBio Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-oasisbio-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public OasisBio Page
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsive Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsive-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#micro-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro-interactions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyframe-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyframe Animations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-contrast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Contrast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-reader-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen Reader Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-design-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Design Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Design Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dark-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dark Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internationalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internationalization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../world-design-spec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World Design Spec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Feature Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Feature Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/oauth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/oasisbio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/worlds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worlds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/abilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Strategic Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Strategic Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio Strategic Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Philosophy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Design Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Design Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-swiss-grid-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Swiss Grid System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-blackwhite-minimalism" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Black/White Minimalism
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-editorial-typography" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Editorial Typography
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-motion-restraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Motion Restraint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-palette" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Palette
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Color Palette">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-colors-grayscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secondary Colors (Grayscale)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Colors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typography
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#font-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font Families
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font Sizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-heights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Line Heights
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layout Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spacing-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spacing System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Card
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling-and-user-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling and User Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navbar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Layouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Page Layouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homepage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homepage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oasisbio-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      OasisBio Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-oasisbio-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public OasisBio Page
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsive Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsive-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#micro-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro-interactions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyframe-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyframe Animations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-contrast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Contrast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-reader-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen Reader Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-design-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Design Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Design Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dark-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dark Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internationalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internationalization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="oasisbio-design-documentation">OasisBio Design Documentation</h1>
+<h2 id="design-philosophy">Design Philosophy</h2>
+<p>OasisBio follows a minimalist, modern design approach inspired by Swiss design principles. The design emphasizes clarity, precision, and functionality while maintaining a strong visual identity. The focus is on creating a clean, intuitive interface that allows users to focus on building their digital identities without unnecessary distractions.</p>
+<h2 id="core-design-principles">Core Design Principles</h2>
+<h3 id="1-swiss-grid-system">1. Swiss Grid System</h3>
+<ul>
+<li><strong>12-column grid</strong> for consistent layout structure</li>
+<li><strong>Precise alignment</strong> of elements</li>
+<li><strong>Strong negative space</strong> to enhance readability</li>
+<li><strong>Modular design</strong> for consistent component sizing</li>
+</ul>
+<h3 id="2-blackwhite-minimalism">2. Black/White Minimalism</h3>
+<ul>
+<li><strong>Monochromatic color scheme</strong> with black, white, and shades of gray</li>
+<li><strong>High contrast</strong> for improved readability</li>
+<li><strong>Clean typography</strong> with clear hierarchy</li>
+<li><strong>Subtle animations</strong> for enhanced user experience</li>
+</ul>
+<h3 id="3-editorial-typography">3. Editorial Typography</h3>
+<ul>
+<li><strong>Clear hierarchy</strong> with distinct title and body text styles</li>
+<li><strong>Generous line spacing</strong> for improved readability</li>
+<li><strong>Consistent font usage</strong> across the application</li>
+<li><strong>Responsive typography</strong> that adapts to different screen sizes</li>
+</ul>
+<h3 id="4-motion-restraint">4. Motion Restraint</h3>
+<ul>
+<li><strong>Subtle hover effects</strong> for interactive elements</li>
+<li><strong>Smooth transitions</strong> between states</li>
+<li><strong>Purposeful animations</strong> that enhance functionality</li>
+<li><strong>Performance-optimized</strong> motion effects</li>
+</ul>
+<h2 id="color-palette">Color Palette</h2>
+<h3 id="primary-colors">Primary Colors</h3>
+<ul>
+<li><strong>Black</strong>: #000000</li>
+<li><strong>White</strong>: #FFFFFF</li>
+</ul>
+<h3 id="secondary-colors-grayscale">Secondary Colors (Grayscale)</h3>
+<ul>
+<li><strong>Dark Gray</strong>: #111111</li>
+<li><strong>Medium Gray</strong>: #666666</li>
+<li><strong>Light Gray</strong>: #D9D9D9</li>
+<li><strong>Very Light Gray</strong>: #F5F5F5</li>
+</ul>
+<h3 id="functional-colors">Functional Colors</h3>
+<ul>
+<li><strong>Success</strong>: #10B981 (Emerald)</li>
+<li><strong>Warning</strong>: #F59E0B (Amber)</li>
+<li><strong>Error</strong>: #EF4444 (Red)</li>
+<li><strong>Info</strong>: #3B82F6 (Blue)</li>
+</ul>
+<h2 id="typography">Typography</h2>
+<h3 id="font-families">Font Families</h3>
+<ul>
+<li><strong>Headings</strong>: Inter Tight / Helvetica Now / Satoshi</li>
+<li><strong>Body Text</strong>: Inter / Suisse Intl</li>
+<li><strong>Monospace</strong>: JetBrains Mono / IBM Plex Mono</li>
+</ul>
+<h3 id="font-sizes">Font Sizes</h3>
+<ul>
+<li><strong>H1</strong>: 4rem - 6rem (64px - 96px)</li>
+<li><strong>H2</strong>: 3rem - 4rem (48px - 64px)</li>
+<li><strong>H3</strong>: 2rem - 2.5rem (32px - 40px)</li>
+<li><strong>H4</strong>: 1.5rem - 1.75rem (24px - 28px)</li>
+<li><strong>Body</strong>: 1rem - 1.25rem (16px - 20px)</li>
+<li><strong>Small</strong>: 0.875rem (14px)</li>
+<li><strong>Caption</strong>: 0.75rem (12px)</li>
+</ul>
+<h3 id="line-heights">Line Heights</h3>
+<ul>
+<li><strong>Headings</strong>: 1.1 - 1.2</li>
+<li><strong>Body Text</strong>: 1.5 - 1.6</li>
+<li><strong>Small Text</strong>: 1.4</li>
+</ul>
+<h2 id="layout-structure">Layout Structure</h2>
+<h3 id="grid-system">Grid System</h3>
+<pre><code>.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+</code></pre>
+<h3 id="spacing-system">Spacing System</h3>
+<ul>
+<li><strong>xs</strong>: 0.25rem (4px)</li>
+<li><strong>sm</strong>: 0.5rem (8px)</li>
+<li><strong>md</strong>: 1rem (16px)</li>
+<li><strong>lg</strong>: 1.5rem (24px)</li>
+<li><strong>xl</strong>: 2rem (32px)</li>
+<li><strong>2xl</strong>: 3rem (48px)</li>
+<li><strong>3xl</strong>: 4rem (64px)</li>
+<li><strong>4xl</strong>: 6rem (96px)</li>
+</ul>
+<h2 id="components">Components</h2>
+<h3 id="button">Button</h3>
+<ul>
+<li><strong>Variants</strong>: primary, secondary, outline, ghost</li>
+<li><strong>Sizes</strong>: sm, md, lg, xl</li>
+<li><strong>States</strong>: default, hover, active, disabled</li>
+<li><strong>Styles</strong>:
+  ```css
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }</li>
+</ul>
+<p>.btn-primary {
+    background-color: #000000;
+    color: #FFFFFF;
+  }</p>
+<p>.btn-primary:hover {
+    background-color: #111111;
+  }
+  ```</p>
+<h3 id="card">Card</h3>
+<ul>
+<li><strong>Structure</strong>: header, content, footer</li>
+<li><strong>Variants</strong>: default, elevated, outlined</li>
+<li><strong>Styles</strong>:
+  ```css
+  .card {
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }</li>
+</ul>
+<p>.card-header {
+    padding: 1rem;
+    border-bottom: 1px solid #D9D9D9;
+  }</p>
+<p>.card-content {
+    padding: 1rem;
+  }
+  ```</p>
+<h3 id="input">Input</h3>
+<ul>
+<li><strong>Types</strong>: text, password, email, number, date, select</li>
+<li><strong>States</strong>: default, focus, error, disabled</li>
+<li><strong>Styles</strong>:
+  ```css
+  .input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #D9D9D9;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }</li>
+</ul>
+<p>.input:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  }</p>
+<p>.input-error {
+    border-color: #EF4444;
+  }</p>
+<p>.input-error:focus {
+    border-color: #EF4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  }</p>
+<p>.error-message {
+    color: #EF4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  ```</p>
+<h3 id="error-handling-and-user-feedback">Error Handling and User Feedback</h3>
+<ul>
+<li><strong>Error States</strong>: Clear visual indicators for form errors</li>
+<li><strong>Success Messages</strong>: Green background with checkmark icon</li>
+<li><strong>Loading States</strong>: Subtle loading indicators during form submission</li>
+<li><strong>Toast Notifications</strong>: Non-intrusive feedback for user actions</li>
+<li><strong>Animation</strong>: Smooth transitions for error/success states</li>
+<li><strong>Accessibility</strong>: ARIA attributes for screen reader support</li>
+</ul>
+<h3 id="navbar">Navbar</h3>
+<ul>
+<li><strong>Structure</strong>: logo, navigation links, user menu</li>
+<li><strong>Responsive</strong>: collapsible for mobile devices</li>
+<li><strong>Styles</strong>:
+  ```css
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D9D9D9;
+  }</li>
+</ul>
+<p>.navbar-links {
+    display: flex;
+    gap: 1rem;
+  }
+  ```</p>
+<h2 id="page-layouts">Page Layouts</h2>
+<h3 id="homepage">Homepage</h3>
+<ul>
+<li><strong>Hero Section</strong>: Large headline, subtitle, CTA buttons</li>
+<li><strong>Features Section</strong>: Grid of feature cards</li>
+<li><strong>CTA Section</strong>: Bold call-to-action</li>
+<li><strong>Footer</strong>: Links and copyright information</li>
+</ul>
+<h3 id="dashboard">Dashboard</h3>
+<ul>
+<li><strong>Sidebar</strong>: Navigation menu</li>
+<li><strong>Main Content</strong>: Cards for OasisBios, worlds, models</li>
+<li><strong>Header</strong>: User information and actions</li>
+</ul>
+<h3 id="oasisbio-builder">OasisBio Builder</h3>
+<ul>
+<li><strong>Step-by-Step</strong>: Linear progression through creation steps</li>
+<li><strong>Form Sections</strong>: Organized input fields</li>
+<li><strong>Navigation</strong>: Previous/Next buttons</li>
+</ul>
+<h3 id="public-oasisbio-page">Public OasisBio Page</h3>
+<ul>
+<li><strong>Hero</strong>: Identity name, tagline, era information</li>
+<li><strong>Basic Profile</strong>: Core identity information</li>
+<li><strong>Ability Pool</strong>: Visual representation of skills</li>
+<li><strong>Repositories</strong>: Tabs for DCOS, References, Worlds</li>
+<li><strong>3D Model Viewer</strong>: Interactive model display</li>
+<li><strong>Timeline</strong>: Era versions navigation</li>
+</ul>
+<h2 id="responsive-design">Responsive Design</h2>
+<h3 id="breakpoints">Breakpoints</h3>
+<ul>
+<li><strong>Mobile</strong>: &lt; 640px</li>
+<li><strong>Tablet</strong>: 640px - 1024px</li>
+<li><strong>Desktop</strong>: &gt; 1024px</li>
+</ul>
+<h3 id="responsive-strategies">Responsive Strategies</h3>
+<ul>
+<li><strong>Fluid typography</strong> that scales with viewport</li>
+<li><strong>Grid system</strong> that adjusts column count</li>
+<li><strong>Component stacking</strong> for smaller screens</li>
+<li><strong>Touch-friendly</strong> interactive elements</li>
+</ul>
+<h2 id="animations">Animations</h2>
+<h3 id="micro-interactions">Micro-interactions</h3>
+<ul>
+<li><strong>Button hover</strong>: Subtle scale and color change</li>
+<li><strong>Card hover</strong>: Slight lift and shadow increase</li>
+<li><strong>Input focus</strong>: Border and shadow animation</li>
+<li><strong>Page transitions</strong>: Fade-in effects</li>
+</ul>
+<h3 id="keyframe-animations">Keyframe Animations</h3>
+<ul>
+<li><strong>Hero text reveal</strong>: Typewriter effect</li>
+<li><strong>Feature card entrance</strong>: Staggered fade-in</li>
+<li><strong>Timeline navigation</strong>: Smooth sliding transitions</li>
+<li><strong>3D model rotation</strong>: Subtle continuous rotation</li>
+</ul>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="color-contrast">Color Contrast</h3>
+<ul>
+<li><strong>Text vs Background</strong>: Minimum 4.5:1 contrast ratio</li>
+<li><strong>Interactive Elements</strong>: Minimum 3:1 contrast ratio</li>
+<li><strong>WCAG 2.1 AA compliance</strong></li>
+</ul>
+<h3 id="keyboard-navigation">Keyboard Navigation</h3>
+<ul>
+<li><strong>Tab order</strong> that follows logical flow</li>
+<li><strong>Focus indicators</strong> for all interactive elements</li>
+<li><strong>Skip links</strong> for screen reader users</li>
+</ul>
+<h3 id="screen-reader-support">Screen Reader Support</h3>
+<ul>
+<li><strong>Semantic HTML</strong> for proper element identification</li>
+<li><strong>ARIA labels</strong> for non-semantic elements</li>
+<li><strong>Landmark regions</strong> for page structure</li>
+</ul>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="css-optimization">CSS Optimization</h3>
+<ul>
+<li><strong>Tailwind CSS</strong> for utility-first styling</li>
+<li><strong>Purge unused CSS</strong> in production</li>
+<li><strong>Minify CSS</strong> for reduced file size</li>
+<li><strong>Critical CSS</strong> for above-the-fold content</li>
+</ul>
+<h3 id="image-optimization">Image Optimization</h3>
+<ul>
+<li><strong>Responsive images</strong> with srcset</li>
+<li><strong>Lazy loading</strong> for off-screen images</li>
+<li><strong>Optimal file formats</strong> (WebP for modern browsers)</li>
+<li><strong>Image compression</strong> without quality loss</li>
+</ul>
+<h3 id="font-optimization">Font Optimization</h3>
+<ul>
+<li><strong>Font subsetting</strong> for reduced file size</li>
+<li><strong>Font display</strong> strategy for better UX</li>
+<li><strong>Preload critical fonts</strong> for faster rendering</li>
+</ul>
+<h2 id="implementation-guidelines">Implementation Guidelines</h2>
+<h3 id="css-best-practices">CSS Best Practices</h3>
+<ul>
+<li><strong>Utility-first</strong> approach with Tailwind CSS</li>
+<li><strong>Component-based</strong> styling for reusability</li>
+<li><strong>Consistent naming conventions</strong></li>
+<li><strong>Avoid !important</strong> declarations</li>
+<li><strong>Organize styles</strong> logically</li>
+</ul>
+<h3 id="design-system">Design System</h3>
+<ul>
+<li><strong>Consistent component usage</strong> across the application</li>
+<li><strong>Shared design tokens</strong> for colors, spacing, and typography</li>
+<li><strong>Documentation</strong> for design patterns and components</li>
+<li><strong>Regular design reviews</strong> to maintain consistency</li>
+</ul>
+<h2 id="future-design-considerations">Future Design Considerations</h2>
+<h3 id="dark-mode">Dark Mode</h3>
+<ul>
+<li><strong>Toggleable dark mode</strong> for user preference</li>
+<li><strong>Optimized color palette</strong> for dark backgrounds</li>
+<li><strong>Accessibility</strong> considerations for dark mode</li>
+</ul>
+<h3 id="customization">Customization</h3>
+<ul>
+<li><strong>Theme options</strong> for personalization</li>
+<li><strong>Custom CSS</strong> support for advanced users</li>
+<li><strong>Brand integration</strong> for organizational users</li>
+</ul>
+<h3 id="internationalization">Internationalization</h3>
+<ul>
+<li><strong>RTL support</strong> for right-to-left languages</li>
+<li><strong>Cultural considerations</strong> for design elements</li>
+<li><strong>Localized date and time formats</strong></li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>The OasisBio design system is built on the principles of clarity, precision, and functionality. By following these guidelines, we ensure a consistent, accessible, and visually appealing user experience across all devices and screen sizes. The design system is flexible enough to accommodate future enhancements while maintaining the core aesthetic that makes OasisBio unique.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

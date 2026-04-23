@@ -1,0 +1,1643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../design/world-design-spec/">
+      
+      
+        <link rel="next" href="../oasisbio/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>OAuth - OasisBio Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#oauth-provider-continue-with-oasis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OasisBio Documentation" class="md-header__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OasisBio Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OAuth
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technical/technical/" class="md-tabs__link">
+          
+  
+  Technical Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../design/design/" class="md-tabs__link">
+          
+  
+  Design Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Feature Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-tabs__link">
+          
+  
+  Strategic Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OasisBio Documentation" class="md-nav__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OasisBio Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Technical Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/edge-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edge Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/world-design-spec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World Design Spec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Feature Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Feature Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OAuth
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    OAuth
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brand-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brand Assets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brand Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oasis-oauth-logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oasis OAuth Logo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button HTML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-register-your-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Register your app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-the-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add the button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-handle-the-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Handle the callback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-access-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Access user data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkce-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKCE Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Scopes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-revocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Revocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oidc-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      OIDC Discovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-lifetimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Lifetimes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Responses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-component-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      React Component Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oasisbio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worlds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worlds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Strategic Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Strategic Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio Strategic Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brand-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brand Assets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brand Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oasis-oauth-logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oasis OAuth Logo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button HTML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-register-your-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Register your app
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-the-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add the button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-handle-the-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Handle the callback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-access-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Access user data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkce-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKCE Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Scopes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-revocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Revocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oidc-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      OIDC Discovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-lifetimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Lifetimes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Responses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-component-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      React Component Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="oauth-provider-continue-with-oasis">OAuth Provider — "Continue with Oasis"</h1>
+<h2 id="overview">Overview</h2>
+<p>OasisBio is an OAuth 2.0 Authorization Server. Third-party applications can integrate "Continue with Oasis" to let users sign in with their Oasis identity and access their character data with explicit consent.</p>
+<p><strong>Standards:</strong> OAuth 2.0 (RFC 6749) · PKCE (RFC 7636) · Token Revocation (RFC 7009) · OpenID Connect Core 1.0</p>
+<hr />
+<h2 id="brand-assets">Brand Assets</h2>
+<h3 id="oasis-oauth-logo">Oasis OAuth Logo</h3>
+<p>The official logo for the "Continue with Oasis" button is available at:</p>
+<pre><code>https://oasisbio.com/assets/oasis_logo.svg
+</code></pre>
+<p>Direct download: <a href="/assets/oasis_logo.svg"><code>/assets/oasis_logo.svg</code></a></p>
+<p><strong>Specifications:</strong> SVG · 61×51px native size · works at any scale</p>
+<h3 id="button-guidelines">Button Guidelines</h3>
+<ul>
+<li>Use the exact text <strong>"Continue with Oasis"</strong> — do not alter the wording</li>
+<li>Always place the Oasis logo to the left of the button text</li>
+<li>Minimum button height: 40px · Minimum logo display size: 16×14px</li>
+<li>Recommended style: black background <code>#000</code>, white text <code>#fff</code>, 8px border radius</li>
+<li>Do not recolor, distort, rotate, or modify the logo in any way</li>
+<li>Do not use the logo in a way that implies endorsement beyond OAuth authentication</li>
+</ul>
+<h3 id="button-html">Button HTML</h3>
+<pre><code class="language-html">&lt;!-- Logo: https://oasisbio.com/assets/oasis_logo.svg --&gt;
+&lt;a href=&quot;https://oasisbio.com/oauth/authorize?...&quot;
+   style=&quot;display:inline-flex;align-items:center;gap:10px;padding:10px 20px;
+          background:#000;color:#fff;border-radius:8px;text-decoration:none;
+          font-family:sans-serif;font-size:15px;font-weight:500;&quot;&gt;
+  &lt;img src=&quot;https://oasisbio.com/assets/oasis_logo.svg&quot; width=&quot;20&quot; height=&quot;17&quot; alt=&quot;Oasis&quot; /&gt;
+  Continue with Oasis
+&lt;/a&gt;
+</code></pre>
+<hr />
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="1-register-your-app">1. Register your app</h3>
+<p>Go to <a href="/developer/apps/new">/developer/apps/new</a> and create an OAuth app. You'll receive:
+- <code>client_id</code> — public identifier, safe to include in frontend code
+- <code>client_secret</code> — shown once, store securely server-side</p>
+<h3 id="2-add-the-button">2. Add the button</h3>
+<pre><code class="language-html">&lt;a href=&quot;https://oasisbio.com/oauth/authorize?client_id=YOUR_CLIENT_ID
+         &amp;redirect_uri=YOUR_REDIRECT_URI&amp;response_type=code
+         &amp;scope=profile+email&amp;state=RANDOM_STATE
+         &amp;code_challenge=YOUR_CODE_CHALLENGE&amp;code_challenge_method=S256&quot;
+   style=&quot;display:inline-flex;align-items:center;gap:10px;padding:10px 20px;
+          background:#000;color:#fff;border-radius:8px;text-decoration:none;
+          font-family:sans-serif;font-size:15px;font-weight:500;&quot;&gt;
+  Continue with Oasis
+&lt;/a&gt;
+</code></pre>
+<h3 id="3-handle-the-callback">3. Handle the callback</h3>
+<p>After the user approves, they're redirected to your <code>redirect_uri</code> with <code>?code=&lt;code&gt;&amp;state=&lt;state&gt;</code>.</p>
+<p>Exchange the code for tokens:</p>
+<pre><code class="language-javascript">const res = await fetch('https://oasisbio.com/api/oauth/token', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  body: new URLSearchParams({
+    grant_type: 'authorization_code',
+    client_id: YOUR_CLIENT_ID,
+    client_secret: YOUR_CLIENT_SECRET,
+    code: CODE_FROM_URL,
+    redirect_uri: YOUR_REDIRECT_URI,
+    code_verifier: STORED_CODE_VERIFIER,
+  }),
+});
+const { access_token, refresh_token, expires_in } = await res.json();
+</code></pre>
+<h3 id="4-access-user-data">4. Access user data</h3>
+<pre><code class="language-javascript">// User profile (requires 'profile' scope)
+const profile = await fetch('https://oasisbio.com/api/oauth/userinfo', {
+  headers: { Authorization: `Bearer ${access_token}` },
+}).then(r =&gt; r.json());
+// → { sub, username, display_name, avatar_url, email }
+
+// Character list (requires 'oasisbios:read' scope)
+const characters = await fetch('https://oasisbio.com/api/oauth/resources/oasisbios', {
+  headers: { Authorization: `Bearer ${access_token}` },
+}).then(r =&gt; r.json());
+</code></pre>
+<hr />
+<h2 id="pkce-implementation">PKCE Implementation</h2>
+<p>PKCE is <strong>required</strong> for all authorization requests. There is no non-PKCE flow.</p>
+<pre><code class="language-javascript">// Generate and store code verifier
+function generateRandomString(length) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
+  return Array.from(crypto.getRandomValues(new Uint8Array(length)))
+    .map(b =&gt; chars[b % chars.length]).join('');
+}
+
+async function sha256(plain) {
+  return crypto.subtle.digest('SHA-256', new TextEncoder().encode(plain));
+}
+
+function base64url(buffer) {
+  return btoa(String.fromCharCode(...new Uint8Array(buffer)))
+    .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+// Before redirect:
+const verifier = generateRandomString(64);
+sessionStorage.setItem('pkce_verifier', verifier);
+const challenge = base64url(await sha256(verifier));
+
+// In token exchange:
+const verifier = sessionStorage.getItem('pkce_verifier');
+</code></pre>
+<hr />
+<h2 id="available-scopes">Available Scopes</h2>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>What it grants</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>profile</code></td>
+<td>username, display name, avatar URL</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>email address</td>
+</tr>
+<tr>
+<td><code>oasisbios:read</code></td>
+<td>character list (title, slug, cover image, identity mode)</td>
+</tr>
+<tr>
+<td><code>oasisbios:full</code></td>
+<td>full character data including abilities, worlds, eras, references</td>
+</tr>
+<tr>
+<td><code>dcos:read</code></td>
+<td>DCOS document content for a character</td>
+</tr>
+</tbody>
+</table>
+<p>Request only the scopes you need. Users see a consent screen listing exactly what they're granting.</p>
+<hr />
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="authorization">Authorization</h3>
+<pre><code>GET /oauth/authorize
+</code></pre>
+<p>Displays the consent page. Required params: <code>client_id</code>, <code>redirect_uri</code>, <code>response_type=code</code>, <code>scope</code>, <code>code_challenge</code>, <code>code_challenge_method=S256</code>. Recommended: <code>state</code>.</p>
+<h3 id="token-exchange">Token Exchange</h3>
+<pre><code>POST /api/oauth/token
+Content-Type: application/x-www-form-urlencoded
+</code></pre>
+<p>Supports <code>authorization_code</code> and <code>refresh_token</code> grant types.</p>
+<h3 id="user-info">User Info</h3>
+<pre><code>GET /api/oauth/userinfo
+Authorization: Bearer &lt;access_token&gt;
+</code></pre>
+<p>Returns <code>{ sub, username, display_name, avatar_url, email? }</code>.</p>
+<h3 id="character-resources">Character Resources</h3>
+<pre><code>GET /api/oauth/resources/oasisbios                    # list (oasisbios:read)
+GET /api/oauth/resources/oasisbios/:id                # full detail (oasisbios:full)
+GET /api/oauth/resources/oasisbios/:id/dcos           # DCOS docs (dcos:read)
+</code></pre>
+<h3 id="token-revocation">Token Revocation</h3>
+<pre><code>POST /api/oauth/revoke
+Body: token=&lt;token&gt;&amp;token_type_hint=access_token
+</code></pre>
+<p>Always returns <code>200 OK</code>.</p>
+<h3 id="oidc-discovery">OIDC Discovery</h3>
+<pre><code>GET /api/oauth/.well-known/openid-configuration
+</code></pre>
+<p>Machine-readable configuration for OIDC clients.</p>
+<hr />
+<h2 id="token-lifetimes">Token Lifetimes</h2>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Lifetime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization code</td>
+<td>10 minutes, single-use</td>
+</tr>
+<tr>
+<td>Access token</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Refresh token</td>
+<td>30 days</td>
+</tr>
+</tbody>
+</table>
+<p>Refresh tokens are rotated on each use — the old token is immediately invalidated.</p>
+<hr />
+<h2 id="error-responses">Error Responses</h2>
+<p>All OAuth errors follow RFC 6749 format:</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: &quot;invalid_grant&quot;,
+  &quot;error_description&quot;: &quot;Authorization code already used&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>invalid_client</code></td>
+<td>Unknown <code>client_id</code> or wrong <code>client_secret</code></td>
+</tr>
+<tr>
+<td><code>invalid_grant</code></td>
+<td>Code expired, already used, or PKCE verifier mismatch</td>
+</tr>
+<tr>
+<td><code>invalid_request</code></td>
+<td>Missing required parameters</td>
+</tr>
+<tr>
+<td><code>invalid_scope</code></td>
+<td>Requested scope not recognized</td>
+</tr>
+<tr>
+<td><code>access_denied</code></td>
+<td>User denied the authorization request</td>
+</tr>
+<tr>
+<td><code>unsupported_grant_type</code></td>
+<td>Grant type not supported</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="security-checklist">Security Checklist</h2>
+<ul>
+<li>Store <code>client_secret</code> server-side only — never in frontend code or version control</li>
+<li>Always validate the <code>state</code> parameter on callback to prevent CSRF</li>
+<li>Store <code>code_verifier</code> in <code>sessionStorage</code>, not <code>localStorage</code></li>
+<li>Use HTTPS for all redirect URIs in production</li>
+<li>Request only the scopes your app actually needs</li>
+<li>Revoke tokens when the user disconnects your app</li>
+</ul>
+<hr />
+<h2 id="react-component-example">React Component Example</h2>
+<pre><code class="language-tsx">function ContinueWithOasis({
+  clientId,
+  redirectUri,
+  scope = 'profile email',
+}: {
+  clientId: string;
+  redirectUri: string;
+  scope?: string;
+}) {
+  const handleClick = async () =&gt; {
+    const verifier = generateRandomString(64);
+    const challenge = base64url(await sha256(verifier));
+    sessionStorage.setItem('pkce_verifier', verifier);
+
+    const url = new URL('https://oasisbio.com/oauth/authorize');
+    url.searchParams.set('client_id', clientId);
+    url.searchParams.set('redirect_uri', redirectUri);
+    url.searchParams.set('response_type', 'code');
+    url.searchParams.set('scope', scope);
+    url.searchParams.set('state', generateRandomString(16));
+    url.searchParams.set('code_challenge', challenge);
+    url.searchParams.set('code_challenge_method', 'S256');
+    window.location.href = url.toString();
+  };
+
+  return (
+    &lt;button
+      onClick={handleClick}
+      style={{
+        display: 'inline-flex', alignItems: 'center', gap: 10,
+        padding: '10px 20px', background: '#000', color: '#fff',
+        borderRadius: 8, border: 'none', cursor: 'pointer',
+        fontSize: 15, fontWeight: 500,
+      }}
+    &gt;
+      &lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot;&gt;
+        &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;white&quot; fillOpacity=&quot;0.15&quot; /&gt;
+        &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;4&quot; fill=&quot;white&quot; /&gt;
+      &lt;/svg&gt;
+      Continue with Oasis
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<hr />
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>Full technical reference: <a href="../technical.md#15-oauth-provider">technical.md — Section 15</a></li>
+<li>Integration guide (in-app): <a href="/developer/docs">/developer/docs</a></li>
+<li>OIDC discovery: <a href="/api/oauth/.well-known/openid-configuration">/api/oauth/.well-known/openid-configuration</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

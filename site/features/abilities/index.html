@@ -1,0 +1,1822 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../worlds/">
+      
+      
+        <link rel="next" href="../repositories/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Abilities - OasisBio Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ability-pool-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OasisBio Documentation" class="md-header__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OasisBio Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Abilities
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technical/technical/" class="md-tabs__link">
+          
+  
+  Technical Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../design/design/" class="md-tabs__link">
+          
+  
+  Design Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../oauth/" class="md-tabs__link">
+          
+  
+  Feature Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-tabs__link">
+          
+  
+  Strategic Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OasisBio Documentation" class="md-nav__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OasisBio Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Technical Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/edge-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edge Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/world-design-spec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World Design Spec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Feature Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Feature Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oasisbio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worlds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worlds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Abilities
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Abilities
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-custom-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Custom Abilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-official-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Official Abilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Languages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sports" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-arts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Arts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-music" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Music
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Technology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Science
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-social-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Social Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-survival-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Survival Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-worldbuilding-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Worldbuilding Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-combat-fantasy-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Combat / Fantasy Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-spiritual-abstract-traits" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Spiritual / Abstract Traits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-profession-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Profession Tags
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Levels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Abilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Abilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Abilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tag-chips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag Chips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radar-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radar Charts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expandable-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expandable Cards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#era-and-world-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era and World Binding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Era and World Binding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#era-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era Binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#world-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Binding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Presets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Presets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Presets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creative-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creative Presets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Strategic Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Strategic Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio Strategic Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-custom-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Custom Abilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-official-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Official Abilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Languages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sports" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-arts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Arts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-music" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Music
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Technology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Science
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-social-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Social Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-survival-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Survival Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-worldbuilding-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Worldbuilding Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-combat-fantasy-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Combat / Fantasy Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-spiritual-abstract-traits" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Spiritual / Abstract Traits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-profession-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Profession Tags
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Levels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Abilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Abilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-abilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Abilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tag-chips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag Chips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radar-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radar Charts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expandable-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expandable Cards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#era-and-world-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era and World Binding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Era and World Binding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#era-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era Binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#world-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Binding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ability-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability Presets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ability Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Presets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Presets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creative-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creative Presets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ability-pool-system">Ability Pool System</h1>
+<h2 id="overview">Overview</h2>
+<p>The Ability Pool system is a core feature of OasisBio that allows users to define, manage, and visualize the skills, traits, and abilities of their identities. It provides a structured way to represent the capabilities of an identity across different eras and worlds.</p>
+<h2 id="ability-types">Ability Types</h2>
+<h3 id="1-custom-abilities">1. Custom Abilities</h3>
+<ul>
+<li><strong>Description</strong>: User-defined abilities that are unique to a specific identity</li>
+<li><strong>Use Case</strong>: Personal skills, unique talents, specialized knowledge</li>
+<li><strong>Example</strong>: "Quantum Physics", "Dragon Taming", "Cooking"</li>
+</ul>
+<h3 id="2-official-abilities">2. Official Abilities</h3>
+<ul>
+<li><strong>Description</strong>: Pre-defined abilities provided by the platform</li>
+<li><strong>Use Case</strong>: Common skills, standardized abilities, widely recognized talents</li>
+<li><strong>Example</strong>: "English", "Basketball", "Programming"</li>
+</ul>
+<h2 id="ability-categories">Ability Categories</h2>
+<p>OasisBio provides a comprehensive categorization system for abilities:</p>
+<h3 id="1-languages">1. Languages</h3>
+<ul>
+<li><strong>Examples</strong>: English, Spanish, Japanese, French, Mandarin</li>
+<li><strong>Level Description</strong>: Fluency level (beginner to native)</li>
+</ul>
+<h3 id="2-sports">2. Sports</h3>
+<ul>
+<li><strong>Examples</strong>: Basketball, Football, Running, Swimming, Skateboarding</li>
+<li><strong>Level Description</strong>: Skill level (amateur to professional)</li>
+</ul>
+<h3 id="3-arts">3. Arts</h3>
+<ul>
+<li><strong>Examples</strong>: Drawing, Photography, Filmmaking, Fashion Styling, Calligraphy</li>
+<li><strong>Level Description</strong>: Proficiency level (hobbyist to master)</li>
+</ul>
+<h3 id="4-music">4. Music</h3>
+<ul>
+<li><strong>Examples</strong>: Rap, Singing, Beatmaking, Guitar, Piano</li>
+<li><strong>Level Description</strong>: Skill level (beginner to virtuoso)</li>
+</ul>
+<h3 id="5-technology">5. Technology</h3>
+<ul>
+<li><strong>Examples</strong>: Frontend Development, AI Prompting, Game Design, 3D Modeling, Data Analysis</li>
+<li><strong>Level Description</strong>: Expertise level (novice to expert)</li>
+</ul>
+<h3 id="6-science">6. Science</h3>
+<ul>
+<li><strong>Examples</strong>: Physics, Chemistry, Biology, Astronomy, Mathematics</li>
+<li><strong>Level Description</strong>: Knowledge level (basic to advanced)</li>
+</ul>
+<h3 id="7-social-skills">7. Social Skills</h3>
+<ul>
+<li><strong>Examples</strong>: Public Speaking, Negotiation, Networking, Empathy, Leadership</li>
+<li><strong>Level Description</strong>: Proficiency level (beginner to master)</li>
+</ul>
+<h3 id="8-survival-skills">8. Survival Skills</h3>
+<ul>
+<li><strong>Examples</strong>: Camping, Navigation, First Aid, Foraging, Self-Defense</li>
+<li><strong>Level Description</strong>: Competency level (basic to expert)</li>
+</ul>
+<h3 id="9-worldbuilding-skills">9. Worldbuilding Skills</h3>
+<ul>
+<li><strong>Examples</strong>: Storytelling, Map Making, Character Creation, Lore Development</li>
+<li><strong>Level Description</strong>: Skill level (hobbyist to professional)</li>
+</ul>
+<h3 id="10-combat-fantasy-skills">10. Combat / Fantasy Skills</h3>
+<ul>
+<li><strong>Examples</strong>: Swordsmanship, Magic, Martial Arts, Archery, Telepathy</li>
+<li><strong>Level Description</strong>: Power level (novice to master)</li>
+</ul>
+<h3 id="11-spiritual-abstract-traits">11. Spiritual / Abstract Traits</h3>
+<ul>
+<li><strong>Examples</strong>: Intuition, Creativity, Wisdom, Resilience, Empathy</li>
+<li><strong>Level Description</strong>: Strength level (weak to strong)</li>
+</ul>
+<h3 id="12-profession-tags">12. Profession Tags</h3>
+<ul>
+<li><strong>Examples</strong>: Engineer, Artist, Scientist, Teacher, Entrepreneur</li>
+<li><strong>Level Description</strong>: Professional level (entry to expert)</li>
+</ul>
+<h2 id="ability-structure">Ability Structure</h2>
+<p>Each ability includes the following attributes:</p>
+<ul>
+<li><strong>Name</strong>: The name of the ability</li>
+<li><strong>Category</strong>: The category the ability belongs to</li>
+<li><strong>Type</strong>: Custom or official</li>
+<li><strong>Level</strong>: Skill level (1-5)</li>
+<li><strong>Description</strong>: Detailed description of the ability</li>
+<li><strong>Related World</strong>: World the ability is associated with (optional)</li>
+<li><strong>Related Era</strong>: Era the ability is associated with (optional)</li>
+<li><strong>Visibility</strong>: Public or private</li>
+</ul>
+<h2 id="skill-levels">Skill Levels</h2>
+<p>OasisBio uses a 5-point scale to measure ability levels:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beginner</td>
+<td>Basic understanding, limited experience</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Intermediate</td>
+<td>Working knowledge, regular practice</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Advanced</td>
+<td>Proficient, consistent application</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Expert</td>
+<td>Deep knowledge, specialized skills</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Master</td>
+<td>Exceptional ability, recognized authority</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ability-management">Ability Management</h2>
+<h3 id="adding-abilities">Adding Abilities</h3>
+<ol>
+<li><strong>Select Category</strong>: Choose the appropriate category for the ability</li>
+<li><strong>Enter Details</strong>: Provide name, description, and other attributes</li>
+<li><strong>Set Level</strong>: Assign a skill level (1-5)</li>
+<li><strong>Add Context</strong>: Link to specific worlds or eras if applicable</li>
+<li><strong>Save</strong>: Add the ability to the pool</li>
+</ol>
+<h3 id="editing-abilities">Editing Abilities</h3>
+<ul>
+<li>Update ability details</li>
+<li>Change skill level</li>
+<li>Modify category</li>
+<li>Update world or era associations</li>
+<li>Adjust visibility settings</li>
+</ul>
+<h3 id="deleting-abilities">Deleting Abilities</h3>
+<ul>
+<li>Remove abilities from the pool</li>
+<li>Confirmation required before deletion</li>
+</ul>
+<h2 id="ability-visualization">Ability Visualization</h2>
+<h3 id="tag-chips">Tag Chips</h3>
+<ul>
+<li><strong>Description</strong>: Small, colored chips representing each ability</li>
+<li><strong>Usage</strong>: Displayed in the ability pool section of the profile</li>
+<li><strong>Design</strong>: Color-coded by category, with level indicated by size or additional indicators</li>
+</ul>
+<h3 id="radar-charts">Radar Charts</h3>
+<ul>
+<li><strong>Description</strong>: Visual representation of ability levels across categories</li>
+<li><strong>Usage</strong>: Provides an at-a-glance view of an identity's strengths and weaknesses</li>
+<li><strong>Design</strong>: Multi-axis chart with categories as axes and level as distance from center</li>
+</ul>
+<h3 id="expandable-cards">Expandable Cards</h3>
+<ul>
+<li><strong>Description</strong>: Detailed ability information displayed in expandable cards</li>
+<li><strong>Usage</strong>: Clicking on an ability tag opens a card with full details</li>
+<li><strong>Design</strong>: Clean, minimalist cards with ability information and level indicator</li>
+</ul>
+<h2 id="era-and-world-binding">Era and World Binding</h2>
+<h3 id="era-binding">Era Binding</h3>
+<ul>
+<li><strong>Description</strong>: Link abilities to specific time periods</li>
+<li><strong>Use Case</strong>: Track how abilities develop over time</li>
+<li><strong>Example</strong>: "Spanish (Level 1 - High School)" vs "Spanish (Level 4 - Professional)"</li>
+</ul>
+<h3 id="world-binding">World Binding</h3>
+<ul>
+<li><strong>Description</strong>: Link abilities to specific fictional worlds</li>
+<li><strong>Use Case</strong>: Abilities that only exist in certain worlds</li>
+<li><strong>Example</strong>: "Magic" in a fantasy world, "Telepathy" in a sci-fi world</li>
+</ul>
+<h2 id="ability-presets">Ability Presets</h2>
+<p>OasisBio provides a library of pre-defined ability presets to help users quickly build their ability pools:</p>
+<h3 id="language-presets">Language Presets</h3>
+<ul>
+<li>English (various levels)</li>
+<li>Spanish (various levels)</li>
+<li>French (various levels)</li>
+<li>Japanese (various levels)</li>
+<li>Mandarin (various levels)</li>
+</ul>
+<h3 id="technology-presets">Technology Presets</h3>
+<ul>
+<li>Frontend Development (various levels)</li>
+<li>Backend Development (various levels)</li>
+<li>Data Analysis (various levels)</li>
+<li>Graphic Design (various levels)</li>
+<li>Video Editing (various levels)</li>
+</ul>
+<h3 id="creative-presets">Creative Presets</h3>
+<ul>
+<li>Writing (various levels)</li>
+<li>Painting (various levels)</li>
+<li>Music Production (various levels)</li>
+<li>Photography (various levels)</li>
+<li>Acting (various levels)</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Balance</strong>: Create a balanced set of abilities that reflect the identity's strengths and weaknesses</li>
+<li><strong>Consistency</strong>: Maintain consistent ability levels across related skills</li>
+<li><strong>Context</strong>: Link abilities to appropriate eras and worlds</li>
+<li><strong>Detail</strong>: Provide detailed descriptions to give context to each ability</li>
+<li><strong>Organization</strong>: Use categories effectively to organize abilities</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<ul>
+<li><strong>Ability Progression Tracking</strong>: Visualize how abilities develop over time</li>
+<li><strong>Ability Combinations</strong>: Create compound abilities by combining multiple skills</li>
+<li><strong>AI-Assisted Ability Suggestions</strong>: Get recommendations based on identity type and context</li>
+<li><strong>Ability Marketplace</strong>: Share and import ability sets with other users</li>
+<li><strong>Ability Challenges</strong>: Set goals and track progress for skill development</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
