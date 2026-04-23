@@ -1,0 +1,1537 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../technical/">
+      
+      
+        <link rel="next" href="../../design/design/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Edge Functions - OasisBio Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#edge-functions-implementation-migration-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OasisBio Documentation" class="md-header__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OasisBio Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Edge Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../technical/" class="md-tabs__link">
+          
+  
+  Technical Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../design/design/" class="md-tabs__link">
+          
+  
+  Design Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../features/oauth/" class="md-tabs__link">
+          
+  
+  Feature Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-tabs__link">
+          
+  
+  Strategic Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OasisBio Documentation" class="md-nav__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OasisBio Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Technical Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Edge Functions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Edge Functions
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#current-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-nextjs-api-routes-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Next.js API Routes (Current)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-api-routes-nextjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current API Routes (Next.js)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Current API Routes (Next.js)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiasset-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/asset-token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiauthprofile-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/auth/profile-sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apireference-enrich" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/reference-enrich
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apioasisbiosidpublish-already-implemented" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/oasisbios/[id]/publish (already implemented)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-to-supabase-edge-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration to Supabase Edge Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration to Supabase Edge Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_sharedcorsts" class="md-nav__link">
+    <span class="md-ellipsis">
+      _shared/cors.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_sharedclientsts" class="md-nav__link">
+    <span class="md-ellipsis">
+      _shared/clients.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-asset-tokenindexts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: asset-token/index.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-frontend-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Frontend Calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-function-rules-from-spec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Function Rules (from spec)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-stays-in-nextjs-never-migrates-to-edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Stays in Next.js (Never Migrates to Edge)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/world-design-spec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World Design Spec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Feature Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Feature Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/oauth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/oasisbio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/worlds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worlds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/abilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Strategic Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Strategic Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio Strategic Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#current-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-nextjs-api-routes-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Next.js API Routes (Current)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-api-routes-nextjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current API Routes (Next.js)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Current API Routes (Next.js)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiasset-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/asset-token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiauthprofile-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/auth/profile-sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apireference-enrich" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/reference-enrich
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apioasisbiosidpublish-already-implemented" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/oasisbios/[id]/publish (already implemented)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-to-supabase-edge-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration to Supabase Edge Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration to Supabase Edge Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_sharedcorsts" class="md-nav__link">
+    <span class="md-ellipsis">
+      _shared/cors.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_sharedclientsts" class="md-nav__link">
+    <span class="md-ellipsis">
+      _shared/clients.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-asset-tokenindexts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: asset-token/index.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-frontend-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Frontend Calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-function-rules-from-spec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Function Rules (from spec)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-stays-in-nextjs-never-migrates-to-edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Stays in Next.js (Never Migrates to Edge)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="edge-functions-implementation-migration-guide">Edge Functions — Implementation &amp; Migration Guide</h1>
+<h2 id="current-status">Current Status</h2>
+<p>The four planned Edge Functions are currently implemented as <strong>Next.js API routes</strong>. They are functionally identical to the Edge Function specification. Migration to Supabase Edge Functions can be done at any time with minimal code changes.</p>
+<h2 id="why-nextjs-api-routes-current">Why Next.js API Routes (Current)</h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Next.js API Route</th>
+<th>Supabase Edge Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cold start</td>
+<td>~100–300ms (Cloudflare Pages)</td>
+<td>~50ms (global edge nodes)</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Automatic with main app</td>
+<td>Requires Supabase CLI + Docker</td>
+</tr>
+<tr>
+<td>Code location</td>
+<td>Single repository</td>
+<td>Separate <code>supabase/functions/</code> directory</td>
+</tr>
+<tr>
+<td>Prisma support</td>
+<td>Full support</td>
+<td>Limited (no connection pooling)</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>One deploy pipeline</td>
+<td>Two deploy pipelines</td>
+</tr>
+<tr>
+<td>When to prefer</td>
+<td>Current stage (low traffic)</td>
+<td>High traffic, latency-sensitive</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision:</strong> Use Next.js API routes until traffic justifies the operational overhead of Edge Functions.</p>
+<hr />
+<h2 id="current-api-routes-nextjs">Current API Routes (Next.js)</h2>
+<h3 id="post-apiasset-token"><code>POST /api/asset-token</code></h3>
+<p>Generates signed upload/download URLs for Supabase Storage and Cloudflare R2.</p>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;action&quot;: &quot;upload&quot; | &quot;download&quot;,
+  &quot;resourceType&quot;: &quot;avatar&quot; | &quot;character_cover&quot; | &quot;model_preview&quot; | &quot;model&quot;,
+  &quot;resourceId&quot;: &quot;bio_xxx&quot;,
+  &quot;filename&quot;: &quot;cover.webp&quot;,
+  &quot;contentType&quot;: &quot;image/webp&quot;,
+  &quot;size&quot;: 245123
+}
+</code></pre>
+<p><strong>Response (upload, Supabase):</strong></p>
+<pre><code class="language-json">{
+  &quot;provider&quot;: &quot;supabase&quot;,
+  &quot;method&quot;: &quot;signed-upload&quot;,
+  &quot;bucket&quot;: &quot;character-covers&quot;,
+  &quot;path&quot;: &quot;user_123/bio_456/cover.webp&quot;,
+  &quot;token&quot;: &quot;xxx&quot;,
+  &quot;signedUrl&quot;: &quot;https://...&quot;,
+  &quot;expiresIn&quot;: 300,
+  &quot;requestId&quot;: &quot;uuid&quot;
+}
+</code></pre>
+<p><strong>Response (download, R2):</strong></p>
+<pre><code class="language-json">{
+  &quot;provider&quot;: &quot;r2&quot;,
+  &quot;method&quot;: &quot;signed-download&quot;,
+  &quot;url&quot;: &quot;https://...&quot;,
+  &quot;expiresIn&quot;: 3600,
+  &quot;requestId&quot;: &quot;uuid&quot;
+}
+</code></pre>
+<p><strong>Ownership check:</strong> Verifies <code>resourceId</code> belongs to the authenticated user before issuing any token.</p>
+<p><strong>Resource config:</strong></p>
+<table>
+<thead>
+<tr>
+<th>resourceType</th>
+<th>Provider</th>
+<th>Bucket</th>
+<th>Allowed MIME</th>
+<th>Max Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>avatar</code></td>
+<td>Supabase</td>
+<td><code>avatars</code></td>
+<td>webp, png, jpeg</td>
+<td>512 KB</td>
+</tr>
+<tr>
+<td><code>character_cover</code></td>
+<td>Supabase</td>
+<td><code>character-covers</code></td>
+<td>webp, png, jpeg</td>
+<td>800 KB</td>
+</tr>
+<tr>
+<td><code>model_preview</code></td>
+<td>Supabase</td>
+<td><code>model-previews</code></td>
+<td>webp, png, jpeg</td>
+<td>600 KB</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td>R2</td>
+<td>R2 bucket</td>
+<td>gltf-binary, octet-stream</td>
+<td>12 MB</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="post-apiauthprofile-sync"><code>POST /api/auth/profile-sync</code></h3>
+<p>Syncs the authenticated user's profile to Prisma. Creates <code>User</code> + <code>Profile</code> records if they don't exist. Only fills empty fields — never overwrites user-edited data.</p>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;displayName&quot;: &quot;Stephen&quot;,
+  &quot;avatarUrl&quot;: &quot;https://...&quot;,
+  &quot;locale&quot;: &quot;zh-CN&quot;
+}
+</code></pre>
+<p>All fields are optional. If omitted, uses data from the Supabase session.</p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;userId&quot;: &quot;user_xxx&quot;,
+  &quot;profileId&quot;: &quot;profile_xxx&quot;,
+  &quot;username&quot;: &quot;stephen&quot;,
+  &quot;isNewUser&quot;: true,
+  &quot;requestId&quot;: &quot;uuid&quot;
+}
+</code></pre>
+<p><strong>When to call:</strong> After first login, or when the user updates their display name/avatar in a third-party OAuth flow.</p>
+<hr />
+<h3 id="post-apireference-enrich"><code>POST /api/reference-enrich</code></h3>
+<p>Fetches URL metadata for reference items. Extracts Open Graph tags, Twitter Card tags, and standard meta tags.</p>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;url&quot;: &quot;https://example.com/article&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;url&quot;: &quot;https://example.com/article&quot;,
+  &quot;title&quot;: &quot;Example Article&quot;,
+  &quot;description&quot;: &quot;A brief description...&quot;,
+  &quot;coverImage&quot;: &quot;https://example.com/og-image.jpg&quot;,
+  &quot;provider&quot;: &quot;example.com&quot;,
+  &quot;sourceType&quot;: &quot;article&quot;,
+  &quot;metadata&quot;: {
+    &quot;siteName&quot;: &quot;Example Site&quot;,
+    &quot;author&quot;: &quot;John Doe&quot;
+  },
+  &quot;requestId&quot;: &quot;uuid&quot;
+}
+</code></pre>
+<p><strong>Provider detection:</strong> Automatically identifies YouTube, GitHub, Wikipedia, Reddit, Bilibili, Pixiv, ArtStation, DeviantArt, Medium, Substack, and X/Twitter.</p>
+<p><strong>Fetch behavior:</strong>
+- 5-second timeout
+- Reads max 100 KB of HTML (prevents memory issues with large pages)
+- Returns minimal metadata (hostname as title) if fetch fails — never errors on unreachable URLs</p>
+<hr />
+<h3 id="post-apioasisbiosidpublish-already-implemented"><code>POST /api/oasisbios/[id]/publish</code> (already implemented)</h3>
+<p>Publishes a character via the <code>publish_bio</code> database RPC. See <a href="../technical/#publish-a-character">technical.md</a> for details.</p>
+<hr />
+<h2 id="migration-to-supabase-edge-functions">Migration to Supabase Edge Functions</h2>
+<p>When you're ready to migrate, follow these steps.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<pre><code class="language-bash"># Install Supabase CLI
+npm install -g supabase
+
+# Install Docker Desktop (required for local testing)
+# https://www.docker.com/products/docker-desktop/
+
+# Login to Supabase
+supabase login
+
+# Link to your project
+supabase link --project-ref dhkgfdllgtmbkwcbubqt
+</code></pre>
+<h3 id="directory-structure">Directory Structure</h3>
+<pre><code>supabase/
+  functions/
+    _shared/
+      cors.ts          # CORS headers
+      auth.ts          # JWT verification
+      clients.ts       # createUserClient + createAdminClient
+      response.ts      # Structured response helpers
+      logger.ts        # Structured logging
+    asset-token/
+      index.ts
+    auth-profile-sync/
+      index.ts
+    reference-enrich/
+      index.ts
+    publish-bio/
+      index.ts
+</code></pre>
+<h3 id="_sharedcorsts"><code>_shared/cors.ts</code></h3>
+<pre><code class="language-typescript">export const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-request-id',
+};
+</code></pre>
+<h3 id="_sharedclientsts"><code>_shared/clients.ts</code></h3>
+<pre><code class="language-typescript">import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+// User client — uses the request's Authorization header
+export function createUserClient(req: Request) {
+  return createClient(
+    Deno.env.get('SUPABASE_URL')!,
+    Deno.env.get('SUPABASE_ANON_KEY')!,
+    { global: { headers: { Authorization: req.headers.get('Authorization')! } } }
+  );
+}
+
+// Admin client — bypasses RLS
+export function createAdminClient() {
+  return createClient(
+    Deno.env.get('SUPABASE_URL')!,
+    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
+  );
+}
+</code></pre>
+<h3 id="example-asset-tokenindexts">Example: <code>asset-token/index.ts</code></h3>
+<pre><code class="language-typescript">import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
+import { corsHeaders } from '../_shared/cors.ts';
+import { createUserClient, createAdminClient } from '../_shared/clients.ts';
+
+serve(async (req) =&gt; {
+  if (req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders });
+  }
+
+  try {
+    const userClient = createUserClient(req);
+    const { data: { user }, error } = await userClient.auth.getUser();
+    if (error || !user) {
+      return new Response(
+        JSON.stringify({ error: { code: 'UNAUTHORIZED', message: 'Unauthorized' } }),
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    const body = await req.json();
+    // ... same logic as the Next.js route ...
+
+    return new Response(JSON.stringify(result), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
+  } catch (err) {
+    return new Response(
+      JSON.stringify({ error: { code: 'INTERNAL_ERROR', message: err.message } }),
+      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    );
+  }
+});
+</code></pre>
+<h3 id="deploy">Deploy</h3>
+<pre><code class="language-bash"># Deploy a single function
+supabase functions deploy asset-token
+
+# Deploy all functions
+supabase functions deploy
+
+# Test locally (requires Docker)
+supabase start
+supabase functions serve asset-token --env-file .env
+</code></pre>
+<h3 id="update-frontend-calls">Update Frontend Calls</h3>
+<p>After deploying, update the frontend to call Edge Functions instead of Next.js routes:</p>
+<pre><code class="language-typescript">// Before (Next.js API route)
+const res = await fetch('/api/asset-token', { method: 'POST', body: JSON.stringify(payload) });
+
+// After (Supabase Edge Function)
+const { data, error } = await supabase.functions.invoke('asset-token', { body: payload });
+</code></pre>
+<h3 id="rollback">Rollback</h3>
+<p>If Edge Functions cause issues, simply revert the frontend calls back to <code>/api/*</code> routes. The Next.js routes remain in the codebase and can be re-enabled instantly.</p>
+<hr />
+<h2 id="edge-function-rules-from-spec">Edge Function Rules (from spec)</h2>
+<p>All Edge Functions must follow these 5 rules:</p>
+<ol>
+<li><strong>Mandatory <code>request_id</code></strong> — generate if not provided, always include in response</li>
+<li><strong>Schema validation</strong> — validate all inputs (use Zod or manual checks)</li>
+<li><strong>Structured errors</strong> — always <code>{ error: { code, message } }</code></li>
+<li><strong>Structured logs</strong> — include <code>request_id</code>, <code>user_id</code>, <code>function</code>, <code>resource_id</code>, <code>duration_ms</code></li>
+<li><strong>No Prisma</strong> — Edge Functions must not use Prisma or heavy Node.js services</li>
+</ol>
+<hr />
+<h2 id="what-stays-in-nextjs-never-migrates-to-edge">What Stays in Next.js (Never Migrates to Edge)</h2>
+<p>Per the architecture spec, these always stay in Node.js:</p>
+<ul>
+<li>ZIP import/export (<code>/api/import</code>, <code>/api/export</code>)</li>
+<li>Large file aggregation</li>
+<li>3D model preprocessing</li>
+<li>Complex Prisma transactions</li>
+<li>Webhook handlers (<code>/api/auth/supabase-webhook</code>)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

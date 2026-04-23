@@ -1,0 +1,1726 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../abilities/">
+      
+      
+        <link rel="next" href="../models/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Repositories - OasisBio Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#repository-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OasisBio Documentation" class="md-header__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OasisBio Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Repositories
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technical/technical/" class="md-tabs__link">
+          
+  
+  Technical Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../design/design/" class="md-tabs__link">
+          
+  
+  Design Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../oauth/" class="md-tabs__link">
+          
+  
+  Feature Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-tabs__link">
+          
+  
+  Strategic Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OasisBio Documentation" class="md-nav__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OasisBio Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Technical Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/edge-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edge Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/world-design-spec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World Design Spec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Feature Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Feature Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oasisbio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worlds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worlds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dcos-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCOS Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DCOS Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      References Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-model_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worlds-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worlds Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worlds Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-model_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-features_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Documents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="World Documents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-model_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-and-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication and Authorization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Strategic Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Strategic Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio Strategic Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dcos-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCOS Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DCOS Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      References Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-model_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worlds-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worlds Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worlds Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-model_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-features_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Documents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="World Documents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-model_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-and-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication and Authorization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="repository-system">Repository System</h1>
+<h2 id="overview">Overview</h2>
+<p>The Repository system is a core feature of OasisBio that allows users to store and organize content related to their identities. It consists of three interconnected repositories: DCOS (Dynamic Core Operating Script), References, and Worlds. These repositories provide a structured way to manage identity-related content and enhance the depth of each OasisBio.</p>
+<h2 id="dcos-repository">DCOS Repository</h2>
+<h3 id="overview_1">Overview</h3>
+<p><strong>DCOS (Dynamic Core Operating Script)</strong> is a narrative layer where users define their identity's core logic, principles, and internal scripts. It serves as the foundational narrative framework for the identity.</p>
+<h3 id="purpose">Purpose</h3>
+<ul>
+<li>Define the identity's core principles and values</li>
+<li>Establish the identity's voice and tone</li>
+<li>Create narrative fragments that shape the identity</li>
+<li>Set rules and guidelines for the identity's behavior</li>
+<li>Document the identity's evolution over time</li>
+</ul>
+<h3 id="implementation">Implementation</h3>
+<h4 id="api-endpoints">API Endpoints</h4>
+<ul>
+<li><strong>GET /api/oasisbios/[id]/dcos</strong>: Retrieves all DCOS files for a specific OasisBio</li>
+<li><strong>POST /api/oasisbios/[id]/dcos</strong>: Creates a new DCOS file</li>
+<li><strong>PUT /api/dcos/[id]</strong>: Updates an existing DCOS file</li>
+<li><strong>DELETE /api/dcos/[id]</strong>: Deletes a DCOS file</li>
+</ul>
+<h4 id="data-model">Data Model</h4>
+<pre><code class="language-typescript">interface DcosFile {
+  id: string;
+  oasisBioId: string;
+  title: string;
+  slug: string;
+  content: string;
+  folderPath: string;
+  status: string; // draft, published
+  version: number;
+  eraId: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+}
+</code></pre>
+<h4 id="frontend-features">Frontend Features</h4>
+<ul>
+<li><strong>File List</strong>: Displays all DCOS files with status and version information</li>
+<li><strong>File Editor</strong>: Markdown-enabled editor for creating and editing DCOS content</li>
+<li><strong>Versioning</strong>: Automatically increments version number on updates</li>
+<li><strong>Status Management</strong>: Supports draft and published states</li>
+<li><strong>Loading States</strong>: Visual feedback during API requests</li>
+<li><strong>Error Handling</strong>: Clear error messages for user actions</li>
+</ul>
+<h2 id="references-repository">References Repository</h2>
+<h3 id="overview_2">Overview</h3>
+<p>The References repository is a structured collection of external sources that relate to the identity. It allows users to curate and organize links to articles, videos, music, images, and other resources that inform or inspire the identity.</p>
+<h3 id="purpose_1">Purpose</h3>
+<ul>
+<li>Curate resources that influence the identity</li>
+<li>Provide context for the identity's interests and influences</li>
+<li>Create a personal knowledge base for the identity</li>
+<li>Document external references that shape the identity</li>
+</ul>
+<h3 id="reference-types">Reference Types</h3>
+<ul>
+<li><strong>Article</strong>: Written content from websites, blogs, or publications</li>
+<li><strong>Video</strong>: Video content from platforms like YouTube, Vimeo, etc.</li>
+<li><strong>Song</strong>: Audio content including songs and music</li>
+<li><strong>Image</strong>: Visual content including photos, artwork, and graphics</li>
+<li><strong>Research</strong>: Academic or research-based content</li>
+<li><strong>Moodboard</strong>: Collections of visual references that inspire the identity</li>
+<li><strong>Social Account</strong>: Links to social media profiles or online presence</li>
+<li><strong>Archive Page</strong>: Links to archived content or historical resources</li>
+</ul>
+<h3 id="implementation_1">Implementation</h3>
+<h4 id="api-endpoints_1">API Endpoints</h4>
+<ul>
+<li><strong>GET /api/oasisbios/[id]/references</strong>: Retrieves all reference items for a specific OasisBio</li>
+<li><strong>POST /api/oasisbios/[id]/references</strong>: Creates a new reference item</li>
+<li><strong>PUT /api/references/[id]</strong>: Updates an existing reference item</li>
+<li><strong>DELETE /api/references/[id]</strong>: Deletes a reference item</li>
+</ul>
+<h4 id="data-model_1">Data Model</h4>
+<pre><code class="language-typescript">interface ReferenceItem {
+  id: string;
+  oasisBioId: string;
+  url: string;
+  title: string;
+  description: string | null;
+  sourceType: string;
+  provider: string | null;
+  coverImage: string | null;
+  metadata: string | null;
+  eraId: string | null;
+  worldId: string | null;
+  tags: string;
+}
+</code></pre>
+<h4 id="frontend-features_1">Frontend Features</h4>
+<ul>
+<li><strong>Reference Grid</strong>: Visual display of references as cards</li>
+<li><strong>Filtering</strong>: Filter references by type</li>
+<li><strong>Search</strong>: Search references by title, description, or tags</li>
+<li><strong>Add New References</strong>: Form for adding new reference items</li>
+<li><strong>Delete References</strong>: Remove unwanted reference items</li>
+<li><strong>Loading States</strong>: Visual feedback during API requests</li>
+<li><strong>Error Handling</strong>: Clear error messages for user actions</li>
+</ul>
+<h2 id="worlds-repository">Worlds Repository</h2>
+<h3 id="overview_3">Overview</h3>
+<p>The Worlds repository allows users to create and manage fictional or conceptual worlds that their identities can inhabit. It provides a structured way to build detailed worlds with their own rules, histories, and characteristics.</p>
+<h3 id="purpose_2">Purpose</h3>
+<ul>
+<li>Create fictional settings for identities</li>
+<li>Establish consistent rules and lore for worlds</li>
+<li>Build immersive environments for fictional identities</li>
+<li>Document world-building details for reference</li>
+</ul>
+<h3 id="implementation_2">Implementation</h3>
+<h4 id="api-endpoints_2">API Endpoints</h4>
+<ul>
+<li><strong>GET /api/oasisbios/[id]/worlds</strong>: Retrieves all worlds for a specific OasisBio</li>
+<li><strong>POST /api/oasisbios/[id]/worlds</strong>: Creates a new world</li>
+<li><strong>PUT /api/worlds/[id]</strong>: Updates an existing world</li>
+<li><strong>DELETE /api/worlds/[id]</strong>: Deletes a world</li>
+</ul>
+<h4 id="data-model_2">Data Model</h4>
+<pre><code class="language-typescript">interface WorldItem {
+  id: string;
+  oasisBioId: string;
+  name: string;
+  summary: string;
+  timeSetting: string | null;
+  geography: string | null;
+  physicsRules: string | null;
+  socialStructure: string | null;
+  aestheticKeywords: string | null;
+  majorConflict: string | null;
+  visibility: string; // private, public
+  timeline: string | null;
+  rules: string | null;
+  factions: string | null;
+}
+</code></pre>
+<h4 id="frontend-features_2">Frontend Features</h4>
+<ul>
+<li><strong>World List</strong>: Displays all worlds with basic information</li>
+<li><strong>World Editor</strong>: Comprehensive form for creating and editing worlds</li>
+<li><strong>Detailed Fields</strong>: Supports all world-building fields including geography, physics rules, social structure, etc.</li>
+<li><strong>Loading States</strong>: Visual feedback during API requests</li>
+<li><strong>Error Handling</strong>: Clear error messages for user actions</li>
+</ul>
+<h2 id="world-documents">World Documents</h2>
+<h3 id="overview_4">Overview</h3>
+<p>World Documents are individual documents associated with a specific world. They allow users to create detailed content about different aspects of a world.</p>
+<h3 id="implementation_3">Implementation</h3>
+<h4 id="api-endpoints_3">API Endpoints</h4>
+<ul>
+<li><strong>GET /api/worlds/[id]/documents</strong>: Retrieves all documents for a specific world</li>
+<li><strong>POST /api/worlds/[id]/documents</strong>: Creates a new world document</li>
+<li><strong>PUT /api/worlddocuments/[id]</strong>: Updates an existing world document</li>
+<li><strong>DELETE /api/worlddocuments/[id]</strong>: Deletes a world document</li>
+</ul>
+<h4 id="data-model_3">Data Model</h4>
+<pre><code class="language-typescript">interface WorldDocument {
+  id: string;
+  worldId: string;
+  title: string;
+  docType: string;
+  slug: string;
+  content: string;
+  folderPath: string;
+  sortOrder: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+</code></pre>
+<h2 id="authentication-and-authorization">Authentication and Authorization</h2>
+<p>All repository endpoints implement:
+- <strong>Authentication</strong>: Uses Supabase Auth to verify user is logged in
+- <strong>Authorization</strong>: Verifies that the requested resource belongs to the authenticated user
+- <strong>Error Handling</strong>: Proper error responses for unauthorized access, not found resources, and server errors</p>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Organization</strong>: Use clear and descriptive titles for all repository items</li>
+<li><strong>Documentation</strong>: Provide detailed descriptions for references and worlds</li>
+<li><strong>Cross-Referencing</strong>: Link related content across repositories using eraId and worldId fields</li>
+<li><strong>Version Control</strong>: Take advantage of automatic versioning for DCOS files</li>
+<li><strong>Accessibility</strong>: Ensure content is well-organized and easy to navigate</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<ul>
+<li><strong>Collaborative Editing</strong>: Allow multiple users to edit repository content</li>
+<li><strong>AI-Assisted Content Generation</strong>: Generate content suggestions based on existing material</li>
+<li><strong>Content Import/Export</strong>: Import and export repository content between OasisBios</li>
+<li><strong>Interactive World Maps</strong>: Create interactive maps for world visualization</li>
+<li><strong>Repository Templates</strong>: Pre-built templates for common repository structures</li>
+<li><strong>Advanced Search</strong>: More powerful search capabilities across all repositories</li>
+<li><strong>Content Tagging</strong>: Enhanced tagging system for better organization</li>
+<li><strong>Media Integration</strong>: Direct integration with media platforms for references</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

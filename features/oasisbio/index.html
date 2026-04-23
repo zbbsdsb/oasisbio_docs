@@ -1,0 +1,1419 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../oauth/">
+      
+      
+        <link rel="next" href="../worlds/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>OasisBio - OasisBio Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#oasisbio-identity-container" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OasisBio Documentation" class="md-header__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OasisBio Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OasisBio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technical/technical/" class="md-tabs__link">
+          
+  
+  Technical Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../design/design/" class="md-tabs__link">
+          
+  
+  Design Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../oauth/" class="md-tabs__link">
+          
+  
+  Feature Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-tabs__link">
+          
+  
+  Strategic Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OasisBio Documentation" class="md-nav__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OasisBio Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Technical Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/edge-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edge Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/world-design-spec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World Design Spec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Feature Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Feature Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OasisBio
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity Modes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-real-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Real Identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fictional-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fictional Identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hybrid-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Hybrid Identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-future-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Future Identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-alternate-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Alternate Identity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-profile-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Profile Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Profile Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#era-specific-identities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era-Specific Identities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Era-Specific Identities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#era-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#era-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-oasisbio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an OasisBio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-an-oasisbio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing an OasisBio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-an-oasisbio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting an OasisBio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visibility-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visibility Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-oasisbio-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example OasisBio Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worlds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worlds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Strategic Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Strategic Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio Strategic Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity Modes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-real-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Real Identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fictional-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fictional Identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hybrid-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Hybrid Identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-future-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Future Identity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-alternate-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Alternate Identity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-profile-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Profile Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Profile Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#era-specific-identities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era-Specific Identities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Era-Specific Identities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#era-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#era-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-oasisbio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an OasisBio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-an-oasisbio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing an OasisBio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-an-oasisbio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting an OasisBio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visibility-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visibility Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-oasisbio-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example OasisBio Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="oasisbio-identity-container">OasisBio Identity Container</h1>
+<h2 id="overview">Overview</h2>
+<p>The OasisBio identity container is the core building block of the OasisBio system. It acts as a modular identity container that users can create and manage to represent different aspects of their identity across time and worlds.</p>
+<h2 id="identity-modes">Identity Modes</h2>
+<p>OasisBio supports multiple identity modes to accommodate different types of identities:</p>
+<h3 id="1-real-identity">1. Real Identity</h3>
+<ul>
+<li><strong>Description</strong>: Represents the user's actual self in the real world</li>
+<li><strong>Use Case</strong>: Personal profiles, professional identities</li>
+<li><strong>Example</strong>: "John Doe - Software Engineer"</li>
+</ul>
+<h3 id="2-fictional-identity">2. Fictional Identity</h3>
+<ul>
+<li><strong>Description</strong>: Completely fictional characters created by the user</li>
+<li><strong>Use Case</strong>: Role-playing characters, story characters, game avatars</li>
+<li><strong>Example</strong>: "Elara Stormrider - Space Explorer"</li>
+</ul>
+<h3 id="3-hybrid-identity">3. Hybrid Identity</h3>
+<ul>
+<li><strong>Description</strong>: A mix of real and fictional elements</li>
+<li><strong>Use Case</strong>: Personal brands with creative elements, semi-fictional personas</li>
+<li><strong>Example</strong>: "Tech Wizard - Real developer with fictional magical elements"</li>
+</ul>
+<h3 id="4-future-identity">4. Future Identity</h3>
+<ul>
+<li><strong>Description</strong>: Representation of the user's future self</li>
+<li><strong>Use Case</strong>: Goal setting, future planning, career development</li>
+<li><strong>Example</strong>: "Dr. Jane Smith - 2030 Nobel Prize Winner"</li>
+</ul>
+<h3 id="5-alternate-identity">5. Alternate Identity</h3>
+<ul>
+<li><strong>Description</strong>: Parallel universe versions of the user</li>
+<li><strong>Use Case</strong>: What-if scenarios, alternative life paths</li>
+<li><strong>Example</strong>: "Jane Smith - Parallel Universe Rockstar"</li>
+</ul>
+<h2 id="basic-profile-information">Basic Profile Information</h2>
+<p>Each OasisBio includes the following basic profile information:</p>
+<h3 id="core-attributes">Core Attributes</h3>
+<ul>
+<li><strong>Name</strong>: The primary name of the identity</li>
+<li><strong>Slug</strong>: Unique URL-friendly identifier</li>
+<li><strong>Tagline</strong>: Short description of the identity</li>
+<li><strong>Identity Mode</strong>: Real, fictional, hybrid, future, or alternate</li>
+<li><strong>Birth Date</strong>: Date of birth (optional)</li>
+<li><strong>Gender</strong>: Gender identity (optional)</li>
+<li><strong>Pronouns</strong>: Preferred pronouns (optional)</li>
+<li><strong>Place of Origin</strong>: Birthplace or origin location (optional)</li>
+<li><strong>Current Era</strong>: Time period the identity belongs to (optional)</li>
+<li><strong>Species</strong>: Species or identity class (optional, for fictional characters)</li>
+<li><strong>Status</strong>: Status of the identity (Alive, Archived, Mythic, Unknown)</li>
+<li><strong>Description</strong>: Detailed description of the identity</li>
+</ul>
+<h2 id="era-specific-identities">Era-Specific Identities</h2>
+<p>OasisBio allows users to create multiple identity versions across different time periods:</p>
+<h3 id="era-types">Era Types</h3>
+<ul>
+<li><strong>Past Self</strong>: Historical versions of the identity</li>
+<li><strong>Present Self</strong>: Current version of the identity</li>
+<li><strong>Future Self</strong>: Future versions of the identity</li>
+<li><strong>Alternate Self</strong>: Parallel universe versions</li>
+<li><strong>Fictional Self</strong>: Fictional character versions</li>
+<li><strong>Worldbound Self</strong>: Versions bound to specific worlds</li>
+</ul>
+<h3 id="era-management">Era Management</h3>
+<ul>
+<li>Create multiple era identities for a single OasisBio</li>
+<li>Set start and end dates for each era</li>
+<li>Link abilities, models, and repositories to specific eras</li>
+<li>Navigate between era versions in the public profile</li>
+</ul>
+<h2 id="identity-management">Identity Management</h2>
+<h3 id="creating-an-oasisbio">Creating an OasisBio</h3>
+<ol>
+<li><strong>Choose Identity Mode</strong>: Select the type of identity you want to create</li>
+<li><strong>Basic Information</strong>: Enter core profile details</li>
+<li><strong>Ability Pool</strong>: Add skills and abilities</li>
+<li><strong>Repositories</strong>: Set up DCOS, References, and Worlds</li>
+<li><strong>3D Model</strong>: Upload a visual representation</li>
+<li><strong>Publish</strong>: Make the OasisBio public or keep it private</li>
+</ol>
+<h3 id="editing-an-oasisbio">Editing an OasisBio</h3>
+<ul>
+<li>Update basic information</li>
+<li>Manage era identities</li>
+<li>Modify ability pool</li>
+<li>Edit repository content</li>
+<li>Update 3D model</li>
+<li>Change visibility settings</li>
+</ul>
+<h3 id="deleting-an-oasisbio">Deleting an OasisBio</h3>
+<ul>
+<li>Permanently remove an OasisBio and all associated data</li>
+<li>Confirmation required before deletion</li>
+</ul>
+<h2 id="visibility-settings">Visibility Settings</h2>
+<p>OasisBio identities can have different visibility settings:</p>
+<ul>
+<li><strong>Private</strong>: Only visible to the creator</li>
+<li><strong>Public</strong>: Visible to anyone</li>
+<li><strong>Unlisted</strong>: Visible only via direct URL</li>
+</ul>
+<h2 id="example-oasisbio-structure">Example OasisBio Structure</h2>
+<pre><code>OasisBio: &quot;Elara Stormrider&quot;
+├── Basic Info
+│   ├── Name: &quot;Elara Stormrider&quot;
+│   ├── Tagline: &quot;Intergalactic Explorer&quot;
+│   ├── Identity Mode: &quot;Fictional&quot;
+│   ├── Species: &quot;Human-Alien Hybrid&quot;
+│   ├── Place of Origin: &quot;Planet Vaelor&quot;
+│   └── Description: &quot;A fearless explorer traversing the galaxy...&quot;
+├── Era Identities
+│   ├── &quot;Elara - Cadet&quot;
+│   ├── &quot;Elara - Captain&quot;
+│   └── &quot;Elara - Legend&quot;
+├── Ability Pool
+├── Repositories
+└── 3D Model
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Consistency</strong>: Maintain consistent information across era identities</li>
+<li><strong>Organization</strong>: Use clear naming conventions for era identities</li>
+<li><strong>Detail</strong>: Provide sufficient detail to make each identity compelling</li>
+<li><strong>Visuals</strong>: Use 3D models to enhance identity representation</li>
+<li><strong>Worldbuilding</strong>: Link identities to appropriate fictional worlds</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<ul>
+<li><strong>Cross-Identity Relationships</strong>: Connect multiple OasisBios</li>
+<li><strong>Identity Evolution Tracking</strong>: Visualize identity changes over time</li>
+<li><strong>AI-Assisted Identity Creation</strong>: Generate identity suggestions based on user input</li>
+<li><strong>Identity Templates</strong>: Pre-built identity templates for different use cases</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

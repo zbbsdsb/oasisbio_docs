@@ -1,0 +1,1736 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../repositories/">
+      
+      
+        <link rel="next" href="../../strategy/OasisBio%20Strategic%20Plan/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Models - OasisBio Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3d-character-model-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OasisBio Documentation" class="md-header__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OasisBio Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technical/technical/" class="md-tabs__link">
+          
+  
+  Technical Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../design/design/" class="md-tabs__link">
+          
+  
+  Design Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../oauth/" class="md-tabs__link">
+          
+  
+  Feature Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-tabs__link">
+          
+  
+  Strategic Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OasisBio Documentation" class="md-nav__button md-logo" aria-label="OasisBio Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OasisBio Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Technical Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical/edge-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edge Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/world-design-spec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World Design Spec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Feature Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Feature Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oasisbio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worlds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worlds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glb-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      GLB Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texture-files-embedded-in-glb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texture Files (Embedded in GLB)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Viewer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D Viewer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#era-and-world-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era and World Binding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Era and World Binding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#era-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era Binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#world-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Binding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Techniques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preview-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preview Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preview Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Preview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Preview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Display
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Display">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-built-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-built Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Packs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Strategic Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Strategic Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strategy/OasisBio%20Strategic%20Plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OasisBio Strategic Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glb-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      GLB Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texture-files-embedded-in-glb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texture Files (Embedded in GLB)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Viewer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D Viewer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#era-and-world-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era and World Binding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Era and World Binding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#era-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Era Binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#world-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Binding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Techniques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preview-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preview Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preview Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Preview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Preview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Display
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Display">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-built-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-built Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Packs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="3d-character-model-system">3D Character Model System</h1>
+<h2 id="overview">Overview</h2>
+<p>The 3D Character Model system is a key feature of OasisBio that allows users to upload, manage, and display 3D models representing their identities. It provides a visual representation of the identity and enhances the overall presentation of the OasisBio profile.</p>
+<h2 id="supported-formats">Supported Formats</h2>
+<h3 id="glb-format">GLB Format</h3>
+<ul>
+<li><strong>Description</strong>: Binary GLTF file format</li>
+<li><strong>Advantages</strong>: Single file format, supports animations, efficient loading, widely supported</li>
+<li><strong>File Extension</strong>: <code>.glb</code></li>
+</ul>
+<h3 id="texture-files-embedded-in-glb">Texture Files (Embedded in GLB)</h3>
+<ul>
+<li><strong>Description</strong>: Image files used for textures, embedded within the GLB file</li>
+<li><strong>Supported Formats</strong>: JPEG, PNG, WebP</li>
+<li><strong>Purpose</strong>: Add details and realism to the 3D model</li>
+</ul>
+<h2 id="model-management">Model Management</h2>
+<h3 id="uploading-models">Uploading Models</h3>
+<ol>
+<li><strong>Select File</strong>: Choose a GLB file from your device</li>
+<li><strong>Preview</strong>: View the model before uploading</li>
+<li><strong>Name Model</strong>: Provide a name for the model</li>
+<li><strong>Set Properties</strong>: Configure model settings and associations</li>
+<li><strong>Upload</strong>: Submit the model to the system</li>
+</ol>
+<h3 id="editing-models">Editing Models</h3>
+<ul>
+<li><strong>Update Model</strong>: Replace the GLB file with a new version</li>
+<li><strong>Change Properties</strong>: Update model name, description, and associations</li>
+<li><strong>Adjust Preview</strong>: Set a new default view for the model</li>
+</ul>
+<h3 id="deleting-models">Deleting Models</h3>
+<ul>
+<li><strong>Remove Model</strong>: Delete the model and all associated files</li>
+<li><strong>Confirmation</strong>: Required before permanent deletion</li>
+</ul>
+<h2 id="model-properties">Model Properties</h2>
+<ul>
+<li><strong>Name</strong>: The name of the model</li>
+<li><strong>Description</strong>: A brief description of the model</li>
+<li><strong>File Path</strong>: The storage location of the GLB file</li>
+<li><strong>Model Format</strong>: Format of the model (default: GLB)</li>
+<li><strong>Preview Image</strong>: A static image of the model for preview purposes</li>
+<li><strong>Related World</strong>: World the model is associated with (optional)</li>
+<li><strong>Related Era</strong>: Era the model is associated with (optional)</li>
+<li><strong>Is Primary</strong>: Whether this is the primary model for the identity</li>
+<li><strong>Version</strong>: Version number of the model</li>
+<li><strong>Created At</strong>: Date and time the model was uploaded</li>
+<li><strong>Updated At</strong>: Date and time the model was last updated</li>
+</ul>
+<h2 id="3d-viewer">3D Viewer</h2>
+<h3 id="features">Features</h3>
+<ul>
+<li><strong>Rotation</strong>: Rotate the model to view from different angles</li>
+<li><strong>Zoom</strong>: Zoom in and out to examine details</li>
+<li><strong>Pan</strong>: Move the model within the viewing area</li>
+<li><strong>Lighting</strong>: Adjust lighting to highlight features</li>
+<li><strong>Background</strong>: Toggle between black, white, or transparent background</li>
+<li><strong>Camera Presets</strong>: Quick access to common viewing angles</li>
+<li><strong>Model Information</strong>: Display model details and properties</li>
+</ul>
+<h3 id="implementation">Implementation</h3>
+<ul>
+<li><strong>Technology</strong>: Three.js with GLTFLoader</li>
+<li><strong>Performance</strong>: Optimized for web-based viewing</li>
+<li><strong>Compatibility</strong>: Works across modern browsers</li>
+<li><strong>Loading</strong>: Progressive loading for large models</li>
+</ul>
+<h2 id="era-and-world-binding">Era and World Binding</h2>
+<h3 id="era-binding">Era Binding</h3>
+<ul>
+<li><strong>Description</strong>: Link models to specific time periods</li>
+<li><strong>Use Case</strong>: Show how the identity's appearance changes over time</li>
+<li><strong>Example</strong>: "Young Elara" vs "Elder Elara"</li>
+</ul>
+<h3 id="world-binding">World Binding</h3>
+<ul>
+<li><strong>Description</strong>: Link models to specific fictional worlds</li>
+<li><strong>Use Case</strong>: Create world-specific appearances for the identity</li>
+<li><strong>Example</strong>: "Elara in Cyberpunk World" vs "Elara in Fantasy World"</li>
+</ul>
+<h2 id="model-storage">Model Storage</h2>
+<h3 id="file-structure">File Structure</h3>
+<pre><code>models/
+├── {user_id}/                # User-specific directory
+│   ├── {character_id}/        # Character-specific directory
+│   │   ├── model.glb          # GLB model file
+│   │   ├── preview.webp       # Preview image
+│   │   └── history/           # Version history
+│   │       ├── {timestamp}/   # Timestamp-based version
+│   │           └── model.glb   # Previous version of model
+</code></pre>
+<h3 id="storage-options">Storage Options</h3>
+<ul>
+<li><strong>Development</strong>: Stored in Cloudflare R2</li>
+<li><strong>Production</strong>: Stored in Cloudflare R2</li>
+<li><strong>Access</strong>: Public buckets for images, private bucket for 3D models</li>
+</ul>
+<h2 id="model-optimization">Model Optimization</h2>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li><strong>File Size</strong>: Keep models under 10MB for faster loading</li>
+<li><strong>Polygon Count</strong>: Optimize geometry for web viewing</li>
+<li><strong>Textures</strong>: Use compressed textures to reduce file size</li>
+<li><strong>LOD (Level of Detail)</strong>: Implement different detail levels for different viewing distances</li>
+<li><strong>Caching</strong>: Enable browser caching for frequently accessed models</li>
+</ol>
+<h3 id="optimization-techniques">Optimization Techniques</h3>
+<ul>
+<li><strong>Mesh Simplification</strong>: Reduce polygon count while maintaining visual quality</li>
+<li><strong>Texture Compression</strong>: Use appropriate image formats and compression levels</li>
+<li><strong>Asset Bundling</strong>: GLB format already bundles all assets in one file</li>
+<li><strong>Lazy Loading</strong>: Load models only when needed</li>
+</ul>
+<h2 id="preview-generation">Preview Generation</h2>
+<h3 id="automatic-preview">Automatic Preview</h3>
+<ul>
+<li><strong>Process</strong>: System automatically generates a preview image when a model is uploaded</li>
+<li><strong>Method</strong>: Renders the model from a default angle</li>
+<li><strong>Format</strong>: WebP format for optimal size and quality</li>
+<li><strong>Resolution</strong>: Optimized for web display</li>
+</ul>
+<h3 id="custom-preview">Custom Preview</h3>
+<ul>
+<li><strong>Process</strong>: User can set a custom preview by adjusting the model view</li>
+<li><strong>Method</strong>: Capture the current view in the 3D viewer</li>
+<li><strong>Options</strong>: Adjust lighting and background before capturing</li>
+</ul>
+<h2 id="model-display">Model Display</h2>
+<h3 id="public-profile">Public Profile</h3>
+<ul>
+<li><strong>Location</strong>: Displayed in the 3D Model section of the public OasisBio page</li>
+<li><strong>Interaction</strong>: Visitors can rotate, zoom, and examine the model</li>
+<li><strong>Controls</strong>: Intuitive controls for model manipulation</li>
+<li><strong>Performance</strong>: Optimized for smooth interaction</li>
+</ul>
+<h3 id="dashboard">Dashboard</h3>
+<ul>
+<li><strong>Location</strong>: Displayed in the Models section of the user dashboard</li>
+<li><strong>Management</strong>: Options to edit, delete, or set as default</li>
+<li><strong>Preview</strong>: Thumbnail previews of all models</li>
+</ul>
+<h2 id="model-templates">Model Templates</h2>
+<h3 id="pre-built-models">Pre-built Models</h3>
+<ul>
+<li><strong>Description</strong>: Ready-to-use 3D models provided by the platform</li>
+<li><strong>Categories</strong>: Human, fantasy, sci-fi, abstract</li>
+<li><strong>Customization</strong>: Users can modify templates to fit their identity</li>
+<li><strong>Usage</strong>: Ideal for users without 3D modeling experience</li>
+</ul>
+<h3 id="model-packs">Model Packs</h3>
+<ul>
+<li><strong>Description</strong>: Collections of related models</li>
+<li><strong>Examples</strong>: "Fantasy Character Pack", "Sci-Fi Explorer Pack"</li>
+<li><strong>Benefits</strong>: Consistent style across multiple models</li>
+<li><strong>Availability</strong>: Free and premium options</li>
+</ul>
+<h2 id="best-practices_1">Best Practices</h2>
+<ol>
+<li><strong>File Size</strong>: Keep models small for faster loading</li>
+<li><strong>Quality</strong>: Balance detail with performance</li>
+<li><strong>Consistency</strong>: Maintain consistent style across related models</li>
+<li><strong>Naming</strong>: Use clear, descriptive names for models</li>
+<li><strong>Organization</strong>: Group related models together</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<ul>
+<li><strong>Animation Support</strong>: Add animated models with skeletal rigs</li>
+<li><strong>Interactive Models</strong>: Allow users to customize model features in real-time</li>
+<li><strong>Model Sharing</strong>: Enable users to share models with others</li>
+<li><strong>AI Model Generation</strong>: Generate 3D models from descriptions or images</li>
+<li><strong>Augmented Reality</strong>: View models in AR using mobile devices</li>
+<li><strong>Model Marketplace</strong>: Buy and sell custom models</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
